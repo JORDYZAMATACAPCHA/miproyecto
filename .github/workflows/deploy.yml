@@ -17,4 +17,4 @@ jobs:
           port: 2222
           username: JordyZamCap
           key: ${{ secrets.PRIVATE_KEY }}
-          script: "set -eu; cd /home/JordyZamCap/miproyecto; git pull --ff-only origin main; npm ci; npm run build;"
+          script: "set -eu; cd /home/JordyZamCap/miproyecto; git pull --ff-only origin main; npm ci; npm run build; sudo service php8.4-fpm reload"
